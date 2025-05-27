@@ -45,6 +45,6 @@ jobs:
           file: ./Dockerfile
           platforms: ${{ matrix.arch }}
           push: true
-          tags: registry.cn-hangzhou.aliyuncs.com/dkyy/jenkins-agent:${{ matrix.language }}
+          tags: registry.cn-hangzhou.aliyuncs.com/dkyy/opensumi:${{ matrix.language }}
           cache-from: type=gha
           cache-to: type=gha
