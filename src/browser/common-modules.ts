@@ -39,6 +39,8 @@ import { CommentsModule } from '@opensumi/ide-comments/lib/browser';
 import { ClientAddonModule } from '@opensumi/ide-addons/lib/browser';
 import { TaskModule } from '@opensumi/ide-task/lib/browser';
 import { TestingModule } from '@opensumi/ide-testing/lib/browser';
+import { AINativeModule } from '@opensumi/ide-ai-native/lib/browser';
+import { DesignModule } from '@opensumi/ide-design/lib/browser';
 
 export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   MainLayoutModule,
@@ -57,6 +59,7 @@ export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   OutputModule,
   QuickOpenModule,
   MarkersModule,
+
   ThemeModule,
   WorkspaceModule,
   ExtensionStorageModule,
@@ -74,12 +77,17 @@ export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   VariableModule,
   KeymapsModule,
   TerminalNextModule,
+
+  // Extension Modules
   ExtensionModule,
   OpenVsxExtensionManagerModule,
   MonacoEnhanceModule,
+
+  // addons
   ClientAddonModule,
   CommentsModule,
   TaskModule,
   TestingModule,
-  RemoteOpenerModule,
 ];
+
+export const AIModules: ConstructorOf<BrowserModule>[] = [DesignModule, AINativeModule];
